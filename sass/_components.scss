@@ -1,9 +1,10 @@
+@use 'variables' as v;
 .btn {
   display: inline-block;
   padding: 0.8rem 1.1rem;
-  border-radius: $radius;
+  border-radius: v.$radius;
   border: none;
-  color: $text-dark;
+  color: #fff;
   font-weight: bold;
   font-size: 1rem;
   cursor: pointer;
@@ -11,9 +12,9 @@
     transform: translateY(-1px);
   }
   &--danger {
-    background: $danger;
+    background-color: var(--danger);
   }
   &--success {
-    background: $success;
+    background-color: var(--success);
   }
 }

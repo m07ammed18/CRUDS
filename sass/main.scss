@@ -1,5 +1,4 @@
-@import "_variables";
-@import "_mixin";
-@import "_base";
-@import "_layout";
-@import "_components";
+@use "_variables";
+@use "_components";
+@use "_base";
+@use "_layout";

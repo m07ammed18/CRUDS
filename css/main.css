@@ -1,3 +1,44 @@
+:root {
+  --primary: #007bff;
+  --primary-alt: #6f42c1;
+  --danger: #dc3545;
+  --success: #28a745;
+  --bg-color: #333;
+  --text-color: #fff;
+  --input-color: #111;
+}
+
+.light-mode {
+  --primary: #007bff;
+  --primary-alt: #6f42c1;
+  --danger: #dc3545;
+  --success: #28a745;
+  --bg-color: #f9f9f9;
+  --text-color: #000;
+  --input-color: #bbb;
+}
+
+.btn, .cruds .inputs button, .cruds .outputs .search-btns button, .cruds .outputs table button {
+  display: inline-block;
+  padding: 0.8rem 1.1rem;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.btn:hover, .cruds .inputs button:hover, .cruds .outputs .search-btns button:hover, .cruds .outputs table button:hover {
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+}
+.btn--danger {
+  background-color: var(--danger);
+}
+.btn--success {
+  background-color: var(--success);
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -7,9 +48,48 @@
 
 body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background: #222;
-  color: #fff;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   -webkit-font-smoothing: antialiased;
+}
+
+#theme-switch {
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  background-color: gray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+#theme-switch i {
+  font-size: 30px;
+}
+#theme-switch i.moon {
+  display: none;
+  color: #fff;
+}
+#theme-switch i.sun {
+  color: #d8d808;
+}
+
+.light-mode #theme-switch i.sun {
+  display: none;
+}
+.light-mode #theme-switch i.moon {
+  display: block;
 }
 
 .cruds {
@@ -29,6 +109,18 @@ body {
 .cruds .head p {
   font-size: 1.5rem;
   text-transform: capitalize;
+}
+.cruds input {
+  padding: 1rem;
+  background-color: var(--input-color);
+  width: 100%;
+  margin: 5px 0;
+  color: var(--text-color);
+  border: none;
+  border-radius: 10px;
+}
+.cruds input:focus {
+  outline: none;
 }
 .cruds .inputs .price {
   display: -webkit-box;
@@ -62,7 +154,7 @@ body {
   padding: 10px 5px;
   border-radius: 6px;
   border: none;
-  background-color: #dc3545;
+  background-color: var(--danger);
   color: #fff;
   font-weight: bold;
   font-size: 1rem;
@@ -79,23 +171,11 @@ body {
 }
 .cruds .inputs button {
   margin-top: 20px;
-  background-color: #007bff;
+  background-color: var(--primary);
   width: 100%;
 }
 .cruds .inputs button:hover {
-  background-color: #6f42c1;
-}
-.cruds input {
-  padding: 1rem;
-  background-color: #111;
-  width: 100%;
-  margin: 5px 0;
-  color: #fff;
-  border: none;
-  border-radius: 10px;
-}
-.cruds input:focus {
-  outline: none;
+  background-color: var(--primary-alt);
 }
 .cruds .outputs {
   margin: 50px 0;
@@ -124,10 +204,10 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  background-color: #007bff;
+  background-color: var(--primary);
 }
 .cruds .outputs .search-btns button:hover {
-  background-color: #6f42c1;
+  background-color: var(--primary-alt);
 }
 @media (max-width: 767px) {
   .cruds .outputs .search-btns button {
@@ -152,24 +232,4 @@ body {
 .cruds .outputs table td {
   padding: 0.6rem;
   text-transform: capitalize;
-}
-.btn, .cruds .inputs button, .cruds .outputs .search-btns button, .cruds .outputs table button {
-  display: inline-block;
-  padding: 0.8rem 1.1rem;
-  border-radius: 10px;
-  border: none;
-  color: #fff;
-  font-weight: bold;
-  font-size: 1rem;
-  cursor: pointer;
-}
-.btn:hover, .cruds .inputs button:hover, .cruds .outputs .search-btns button:hover, .cruds .outputs table button:hover {
-  -webkit-transform: translateY(-1px);
-          transform: translateY(-1px);
-}
-.btn--danger {
-  background: #dc3545;
-}
-.btn--success {
-  background: #28a745;
 }/*# sourceMappingURL=main.css.map */

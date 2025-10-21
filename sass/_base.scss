@@ -1,7 +1,8 @@
+@use 'variables' as v;
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background: $bg-dark;
-  color: $text-dark;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   -webkit-font-smoothing: antialiased;
 }

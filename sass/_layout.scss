@@ -1,9 +1,45 @@
+@use "variables" as v;
+@use "components" as *;
+#theme-switch {
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  i {
+    font-size: 30px;
+    &.moon {
+      display: none;
+      color: #fff;
+    }
+    &.sun {
+      color: #d8d808;
+    }
+  }
+}
+.light-mode {
+  #theme-switch i {
+    &.sun {
+      display: none;
+    }
+    &.moon {
+      display: block;
+    }
+  }
+}
 .cruds {
   width: 100%;
-  max-width: $max-width;
+  max-width: v.$max-width;
   margin: 0 auto;
-  padding: 0 $gutter;
-
+  padding: 0 v.$gutter;
   .head {
     text-align: center;
     text-transform: uppercase;
@@ -14,6 +50,18 @@
     p {
       font-size: 1.5rem;
       text-transform: capitalize;
+    }
+  }
+  input {
+    padding: 1rem;
+    background-color: var(--input-color);
+    width: 100%;
+    margin: 5px 0;
+    color: var(--text-color);
+    border: none;
+    border-radius: v.$radius;
+    &:focus {
+      outline: none;
     }
   }
   .inputs {
@@ -35,7 +83,7 @@
         padding: 10px 5px;
         border-radius: 6px;
         border: none;
-        background-color: $danger;
+        background-color: var(--danger);
         color: #fff;
         font-weight: bold;
         font-size: 1rem;
@@ -51,24 +99,12 @@
     }
     button {
       margin-top: 20px;
-      background-color: $primary;
+      background-color: var(--primary);
       width: 100%;
       @extend .btn;
       &:hover {
-        background-color: $primary-alt;
+        background-color: var(--primary-alt);
       }
-    }
-  }
-  input {
-    padding: 1rem;
-    background-color: #111;
-    width: 100%;
-    margin: 5px 0;
-    color: $text-dark;
-    border: none;
-    border-radius: $radius;
-    &:focus {
-      outline: none;
     }
   }
   .outputs {
@@ -85,9 +121,9 @@
       button {
         flex: 1;
         @extend .btn;
-        background-color: $primary;
+        background-color: var(--primary);
         &:hover {
-          background-color: $primary-alt;
+          background-color: var(--primary-alt);
         }
         @media (max-width: 767px) {
           width: 75%;

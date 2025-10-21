@@ -1,3 +1,21 @@
+// Switch theme
+let lightMode = localStorage.getItem("lightmode");
+const themSwitchBtn = document.getElementById("theme-switch");
+const enableLightMode = () => {
+  document.body.classList.toggle("light-mode");
+  localStorage.setItem("lightmode", "active");
+};
+const disablelightmode = () => {
+  document.body.classList.remove("light-mode");
+  localStorage.setItem("lightmode", null);
+};
+if (lightMode === "active") enableLightMode();
+themSwitchBtn.addEventListener("click", () => {
+  lightMode = localStorage.getItem("lightmode");
+  lightMode !== "active" ? enableLightMode() : disablelightmode();
+});
+
+// Get elements
 let title = document.getElementById("title");
 let price = document.getElementById("price");
 let taxes = document.getElementById("taxes");
@@ -131,7 +149,7 @@ function update(index) {
   });
 }
 
-// D => Delet one product
+// D => Delete one product
 function deleteProduct(index) {
   dataStock.splice(index, 1);
   localStorage.setItem("product", JSON.stringify(dataStock));
@@ -141,7 +159,7 @@ function deleteProduct(index) {
 // Delete all Products
 function deleteAllData() {
   if (confirm("Are you sure you want to delete all products?")) {
-    localStorage.removeItem("product")
+    localStorage.removeItem("product");
     dataStock = [];
     showData();
   }
@@ -149,7 +167,6 @@ function deleteAllData() {
 
 // S => Search
 let searchMode = "title";
-
 function getSearchMode(id) {
   let searchInput = document.getElementById("search");
   searchMode = id === "search-title" ? "title" : "category";
