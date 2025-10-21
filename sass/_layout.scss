@@ -1,0 +1,121 @@
+.cruds {
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 $gutter;
+
+  .head {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 2rem 0;
+    h2 {
+      font-size: 2.5rem;
+    }
+    p {
+      font-size: 1.5rem;
+      text-transform: capitalize;
+    }
+  }
+  .inputs {
+    .price {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      @media (max-width: 767px) {
+        flex-direction: column;
+      }
+      input {
+        width: 20%;
+        @media (max-width: 767px) {
+          width: 100%;
+        }
+      }
+      .total {
+        padding: 10px 5px;
+        border-radius: 6px;
+        border: none;
+        background-color: $danger;
+        color: #fff;
+        font-weight: bold;
+        font-size: 1rem;
+        &::before {
+          content: "Total: ";
+        }
+        @media (max-width: 767px) {
+          margin-bottom: 10px;
+          width: 50%;
+          text-align: center;
+        }
+      }
+    }
+    button {
+      margin-top: 20px;
+      background-color: $primary;
+      width: 100%;
+      @extend .btn;
+      &:hover {
+        background-color: $primary-alt;
+      }
+    }
+  }
+  input {
+    padding: 1rem;
+    background-color: #111;
+    width: 100%;
+    margin: 5px 0;
+    color: $text-dark;
+    border: none;
+    border-radius: $radius;
+    &:focus {
+      outline: none;
+    }
+  }
+  .outputs {
+    margin: 50px 0;
+    .search-btns {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 20px;
+      @media (max-width: 767px) {
+        flex-direction: column;
+      }
+      button {
+        flex: 1;
+        @extend .btn;
+        background-color: $primary;
+        &:hover {
+          background-color: $primary-alt;
+        }
+        @media (max-width: 767px) {
+          width: 75%;
+        }
+      }
+    }
+    .delete-all {
+      margin: 30px 0;
+      button {
+        width: 100%;
+      }
+    }
+    .responsive-table {
+      overflow-x: auto;
+    }
+    table {
+      text-align: center;
+      width: 100%;
+      margin: 2rem 0;
+
+      th,
+      td {
+        padding: 0.6rem;
+        text-transform: capitalize;
+      }
+      button {
+        @extend .btn;
+      }
+    }
+  }
+}
