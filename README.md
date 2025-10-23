@@ -53,28 +53,15 @@ All data is stored locally in the browser via **Local Storage**, making it fast 
 ┣ 📜index.html
 ┣ 📜main.js
 ┗ 📜README.md
-
-
+```
 ---
 
-🖼️ Screenshots
-
-> Add screenshots of your UI here for better visualization.
-
-
-
-![Main UI - Light Mode](./screenshots/light-mode.png)
-![Main UI - Dark Mode](./screenshots/dark-mode.png)
-
-
----
-
-🛠️ How to Run Locally
+## 🛠️ How to Run Locally
 
 1. Clone the repository:
-
+```bush
 git clone https://github.com/m07ammed18/CRUDS.git
-
+```
 
 2. Open the project folder.
 
@@ -89,7 +76,6 @@ git clone https://github.com/m07ammed18/CRUDS.git
 
 Mohammed Belhadj
 GitHub Profile
-
 
 ---
 
