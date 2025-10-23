@@ -1,4 +1,4 @@
-# 🛒 CRUDS — Product Management System
+# 🛒 CRUDS - Product Management System
 
 ## 🌐 Live Demo
 [Visit here](https://m07ammed18.github.io/CRUDS/)
@@ -74,8 +74,8 @@ git clone https://github.com/m07ammed18/CRUDS.git
 
 👨‍💻 Author
 
-Mohammed Belhadj
-GitHub Profile
+[Mohammed Belhadj](https://github.com/m07ammed18)
+
 
 ---
 
